@@ -1,9 +1,38 @@
-import svgPaths from "./svg-f0sjbqtogz";
-import imgRectangle29 from "./917491e88286fbe281f07237a62a5c7700dabb5c.png";
-import imgPhone from "./7d22d0f8b6818aab4403a0caeee0340d70e9e065.png";
+import svgPaths from "./svg-txlfwqg21q";
+import imgRectangle60 from "./9df95fb4502c899ab8df1a33620e1c80a6110a7b.png";
+import imgCall from "./7a5f5088f2a83ec2b68fa26cd4ed25f5dcba439a.png";
+import imgLocation from "./0c02815047179ceb30cf75092d72c0519cca5d1a.png";
+import imgMailContact from "./383a0c237017729440369c88244387a5656d85bd.png";
+import imgPhone from "./phoneIcon.png";
 import imgInstagram from "./287100addff7b4b1be96237c455d31e111806645.png";
 import imgFacebookF from "./28b4cecf40a3673d46d70ebfa07b6113c29bb090.png";
 import imgWhatsApp from "./94e2fda64aad88d569d51dc99218b35246d52168.png";
+
+function Component({ className }: { className?: string }) {
+  return (
+    <div className={className || "absolute h-[348px] left-[43px] top-[652px] w-[424px]"} data-name="Component 9">
+      <div className="absolute bg-white inset-[0_0_-29.31%_0] rounded-[54px]">
+        <div aria-hidden="true" className="absolute border-2 border-[#b3b3b3] border-dashed inset-[-1px] pointer-events-none rounded-[55px] shadow-[-6px_34px_41.2px_6px_rgba(0,0,0,0.25)]" />
+      </div>
+      <div className="absolute bg-[rgba(54,255,128,0.22)] inset-[23.56%_35.55%_46.84%_35.81%] rounded-[29px]" />
+      <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[58.05%_30.42%_28.45%_30.42%] leading-[0] not-italic text-[32px] text-black text-center tracking-[-1.6px]">
+        <p className="leading-[normal] mb-0">Call Us</p>
+        <p className="leading-[normal]">&nbsp;</p>
+      </div>
+      <div className="absolute font-['Playfair_Display:Regular',sans-serif] font-normal inset-[71.55%_4.48%_5.17%_4.48%] leading-[0] text-[#16a34a] text-[36px] text-center tracking-[-1.8px]">
+        <p className="leading-[normal] mb-0">+91 98765 43210</p>
+        <p className="leading-[normal]">&nbsp;</p>
+      </div>
+      <div className="absolute font-['Inter:Regular',sans-serif] font-normal inset-[94.83%_25.94%_-5.75%_24.53%] leading-[0] not-italic text-[#bcbcbc] text-[16px] text-center tracking-[-0.8px]">
+        <p className="leading-[normal] mb-0">Mon-Sun, 7am - 9pm</p>
+        <p className="leading-[normal]">&nbsp;</p>
+      </div>
+      <div className="absolute inset-[29.02%_41.27%_52.01%_41.27%] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" data-name="Call">
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgCall} />
+      </div>
+    </div>
+  );
+}
 
 function Group3() {
   return (
@@ -68,69 +97,66 @@ function Group2() {
   );
 }
 
-export default function Sweets() {
+export default function ContactUs() {
   return (
-    <div className="bg-white relative size-full" data-name="Sweets">
-      <p className="-translate-x-1/2 absolute font-['Inter:Black',sans-serif] font-black leading-[normal] left-[579px] not-italic text-[130.619px] text-black text-center top-[237px] tracking-[-6.5309px] w-[848px]">{`Authentic `}</p>
-      <p className="-translate-x-1/2 absolute font-['Luxurious_Script:Regular',sans-serif] h-[216px] leading-[normal] left-[1082.5px] not-italic text-[#1dc95d] text-[239.065px] text-center top-[160px] tracking-[-11.9533px] w-[417px]">Sweets</p>
-      <p className="-translate-x-1/2 absolute font-['Inter:Light',sans-serif] font-light h-[115px] leading-[normal] left-[741.5px] not-italic text-[22.547px] text-black text-center top-[409px] tracking-[-1.1273px] w-[753px]">Handcrafted with pure desi ghee and love. Our sweets bring the authentic taste of tradition to your celebrations.</p>
-      <div className="absolute bg-white h-[579px] left-[96px] rounded-br-[2px] top-[579px] w-[295px]" data-name="Produt card">
-        <div className="absolute bg-[rgba(255,255,255,0)] border border-[#9f9f9f] border-solid inset-[0_0.34%_0_-0.34%] rounded-bl-[53px] rounded-br-[47px] rounded-tl-[52px] rounded-tr-[49px]" />
-        <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[67.53%_30.89%_22.95%_11.53%] leading-[0] not-italic text-[#2c2c2c] text-[20px] tracking-[-1px]">
-          <p className="leading-[normal] mb-0">Fresh Buffalo</p>
-          <p className="leading-[normal]">Milk</p>
-        </div>
-        <p className="absolute font-['Poppins:Regular',sans-serif] inset-[78.41%_7.61%_14.45%_7.46%] leading-[normal] not-italic text-[#71717a] text-[12px] text-center tracking-[-0.6px]">{` Pure, thick, and fresh buffalo milk delivered straight from our dairy farm. `}</p>
-        <div className="absolute inset-[3.4%_5.8%_34.13%_5.51%] rounded-[38.506px]">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[38.506px] size-full" src={imgRectangle29} />
-        </div>
-        <div className="absolute bg-black border border-black border-solid inset-[85.57%_5.8%_4.92%_5.51%] rounded-[25.671px]" />
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[88.79%_25.19%_8.03%_28.41%] leading-[normal] not-italic text-[12.835px] text-center text-white tracking-[-0.6418px]">Order now on whatsapp</p>
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[68.57%_7.47%_28.26%_72.88%] leading-[normal] not-italic text-[#16a34a] text-[15px] text-center tracking-[-0.75px]">₹65 / Litre</p>
+    <div className="bg-white relative size-full" data-name="Contact Us">
+      <p className="-translate-x-1/2 absolute font-['Inter:Black',sans-serif] font-black leading-[normal] left-[567.51px] not-italic text-[162.505px] text-black text-center top-[269.65px] tracking-[-8.1252px] w-[1055.012px]">Get in</p>
+      <p className="-translate-x-1/2 absolute font-['Luxurious_Script:Regular',sans-serif] h-[246.819px] leading-[normal] left-[1008.55px] not-italic text-[#1dc95d] text-[273.175px] text-center top-[195px] tracking-[-13.6587px] w-[476.497px]">Touch</p>
+      <div className="-translate-x-1/2 absolute font-['Inter:Light',sans-serif] font-light h-[143.074px] leading-[0] left-[769.67px] not-italic text-[28.051px] text-black text-center top-[474.93px] tracking-[-1.4025px] w-[936.821px]">
+        <p className="leading-[normal] mb-0">{`Have questions about our products or want to place a custom order? We're here to help. Reach out to us via any of the channels below.`}</p>
+        <p className="leading-[normal]">&nbsp;</p>
       </div>
-      <div className="absolute bg-white h-[579px] left-[411.21px] rounded-br-[2px] top-[579px] w-[295px]" data-name="Produt card">
-        <div className="absolute bg-[rgba(255,255,255,0)] border border-[#9f9f9f] border-solid inset-[0_0.34%_0_-0.34%] rounded-bl-[53px] rounded-br-[47px] rounded-tl-[52px] rounded-tr-[49px]" />
-        <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[67.53%_30.89%_22.95%_11.53%] leading-[0] not-italic text-[#2c2c2c] text-[20px] tracking-[-1px] whitespace-pre-wrap">
-          <p className="leading-[normal] mb-0">{`Fresh Malai `}</p>
-          <p className="leading-[normal]">Paneer</p>
-        </div>
-        <p className="absolute font-['Poppins:Regular',sans-serif] inset-[78.41%_7.61%_14.45%_7.46%] leading-[normal] not-italic text-[#71717a] text-[11px] text-center tracking-[-0.55px]">{` Pure, thick, and fresh buffalo milk delivered straight from our dairy farm. `}</p>
-        <div className="absolute inset-[3.4%_5.8%_34.13%_5.51%] rounded-[38.506px]">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[38.506px] size-full" src={imgRectangle29} />
-        </div>
-        <div className="absolute bg-black border border-black border-solid inset-[85.57%_5.8%_4.92%_5.51%] rounded-[25.671px]" />
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[88.79%_25.19%_8.03%_28.41%] leading-[normal] not-italic text-[12.835px] text-center text-white tracking-[-0.6418px]">Order now on whatsapp</p>
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[68.57%_7.47%_28.26%_72.88%] leading-[normal] not-italic text-[#16a34a] text-[15px] text-center tracking-[-0.75px]">₹65 / Litre</p>
+      <div className="absolute h-[467px] left-[43px] pointer-events-none rounded-[120px] top-[1214px] w-[1368px]">
+        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[120px] size-full" src={imgRectangle60} />
+        <div aria-hidden="true" className="absolute border-6 border-[rgba(179,179,179,0.68)] border-dashed inset-0 rounded-[120px]" />
       </div>
-      <div className="absolute bg-white h-[579px] left-[726.21px] rounded-br-[2px] top-[579px] w-[295px]" data-name="Produt card">
-        <div className="absolute bg-[rgba(255,255,255,0)] border border-[#9f9f9f] border-solid inset-[0_0.34%_0_-0.34%] rounded-bl-[53px] rounded-br-[47px] rounded-tl-[52px] rounded-tr-[49px]" />
-        <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[67.53%_30.89%_22.95%_11.53%] leading-[0] not-italic text-[#2c2c2c] text-[20px] tracking-[-1px] whitespace-pre-wrap">
-          <p className="leading-[normal] mb-0">{`Pure Desi `}</p>
-          <p className="leading-[normal]">Ghee</p>
+      <Component />
+      <div className="absolute h-[348px] left-[495px] top-[656px] w-[419px]" data-name="Component 10">
+        <div className="absolute bg-white inset-[0_0_-29.31%_0] rounded-[54px]">
+          <div aria-hidden="true" className="absolute border-2 border-[#b3b3b3] border-dashed inset-[-1px] pointer-events-none rounded-[55px] shadow-[-6px_34px_41.2px_6px_rgba(0,0,0,0.25)]" />
         </div>
-        <p className="absolute font-['Poppins:Regular',sans-serif] inset-[78.41%_7.61%_14.45%_7.46%] leading-[normal] not-italic text-[#71717a] text-[12px] text-center tracking-[-0.6px]">{` Pure, thick, and fresh buffalo milk delivered straight from our dairy farm. `}</p>
-        <div className="absolute inset-[3.4%_5.8%_34.13%_5.51%] rounded-[38.506px]">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[38.506px] size-full" src={imgRectangle29} />
+        <div className="absolute bg-[rgba(54,255,128,0.22)] inset-[23.56%_35.55%_46.84%_35.81%] rounded-[29px]" />
+        <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[58.05%_30.42%_28.45%_30.42%] leading-[0] not-italic text-[32px] text-black text-center tracking-[-1.6px] whitespace-pre-wrap">
+          <p className="leading-[normal] mb-0">Email Us</p>
+          <p className="leading-[normal] mb-0">&nbsp;</p>
+          <p className="leading-[normal]">&nbsp;</p>
         </div>
-        <div className="absolute bg-black border border-black border-solid inset-[85.57%_5.8%_4.92%_5.51%] rounded-[25.671px]" />
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[88.79%_25.19%_8.03%_28.41%] leading-[normal] not-italic text-[12.835px] text-center text-white tracking-[-0.6418px]">Order now on whatsapp</p>
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[68.57%_7.47%_28.26%_72.88%] leading-[normal] not-italic text-[#16a34a] text-[15px] text-center tracking-[-0.75px]">₹65 / Litre</p>
+        <div className="absolute font-['Playfair_Display:Regular',sans-serif] font-normal inset-[71.55%_4.48%_5.17%_4.48%] leading-[0] text-[#16a34a] text-[36px] text-center tracking-[-1.8px] whitespace-pre-wrap">
+          <p className="leading-[normal] mb-0">info@naveendairy.com</p>
+          <p className="leading-[normal] mb-0">&nbsp;</p>
+          <p className="leading-[normal]">&nbsp;</p>
+        </div>
+        <div className="absolute font-['Inter:Regular',sans-serif] font-normal inset-[94.83%_25.94%_-5.75%_24.53%] leading-[0] not-italic text-[#bcbcbc] text-[16px] text-center tracking-[-0.8px]">
+          <p className="leading-[normal] mb-0">We reply within 24 hours</p>
+          <p className="leading-[normal]">&nbsp;</p>
+        </div>
       </div>
-      <div className="absolute bg-white h-[579px] left-[1041.21px] rounded-br-[2px] top-[579px] w-[295px]" data-name="Produt card">
-        <div className="absolute bg-[rgba(255,255,255,0)] border border-[#9f9f9f] border-solid inset-[0_0.34%_0_-0.34%] rounded-bl-[53px] rounded-br-[47px] rounded-tl-[52px] rounded-tr-[49px]" />
-        <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[67.53%_30.89%_22.95%_11.53%] leading-[0] not-italic text-[#2c2c2c] text-[20px] tracking-[-1px] whitespace-pre-wrap">
-          <p className="leading-[normal] mb-0">{`White Butter `}</p>
-          <p className="leading-[normal]">(Makkhan)</p>
+      <div className="absolute h-[348px] left-[950px] top-[660px] w-[428px]" data-name="Component 11">
+        <div className="absolute bg-white inset-[0_0_-29.31%_0] rounded-[54px]">
+          <div aria-hidden="true" className="absolute border-2 border-[#b3b3b3] border-dashed inset-[-1px] pointer-events-none rounded-[55px] shadow-[-6px_34px_41.2px_6px_rgba(0,0,0,0.25)]" />
         </div>
-        <p className="absolute font-['Poppins:Regular',sans-serif] inset-[78.41%_7.61%_14.45%_7.46%] leading-[normal] not-italic text-[#71717a] text-[12px] text-center tracking-[-0.6px]">{` Pure, thick, and fresh buffalo milk delivered straight from our dairy farm. `}</p>
-        <div className="absolute inset-[3.4%_5.8%_34.13%_5.51%] rounded-[38.506px]">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[38.506px] size-full" src={imgRectangle29} />
+        <div className="absolute bg-[rgba(54,255,128,0.22)] inset-[23.56%_35.55%_46.84%_35.81%] rounded-[29px]" />
+        <div className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[58.05%_30.42%_28.45%_30.42%] leading-[0] not-italic text-[32px] text-black text-center tracking-[-1.6px]">
+          <p className="leading-[normal] mb-0">Visit Us</p>
+          <p className="leading-[normal]">&nbsp;</p>
         </div>
-        <div className="absolute bg-black border border-black border-solid inset-[85.57%_5.8%_4.92%_5.51%] rounded-[25.671px]" />
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[88.79%_25.19%_8.03%_28.41%] leading-[normal] not-italic text-[12.835px] text-center text-white tracking-[-0.6418px]">Order now on whatsapp</p>
-        <p className="absolute font-['Inter:Bold',sans-serif] font-bold inset-[68.57%_7.47%_28.26%_72.88%] leading-[normal] not-italic text-[#16a34a] text-[15px] text-center tracking-[-0.75px]">₹65 / Litre</p>
+        <div className="absolute font-['Playfair_Display:Regular',sans-serif] font-normal inset-[71.55%_4.48%_5.17%_4.48%] leading-[0] text-[#16a34a] text-[36px] text-center tracking-[-1.8px] whitespace-pre-wrap">
+          <p className="leading-[normal] mb-0">Main Market, Dewas</p>
+          <p className="leading-[normal] mb-0">&nbsp;</p>
+          <p className="leading-[normal]">&nbsp;</p>
+        </div>
+        <div className="absolute font-['Inter:Regular',sans-serif] font-normal inset-[94.83%_25.94%_-5.75%_24.53%] leading-[0] not-italic text-[#bcbcbc] text-[16px] text-center tracking-[-0.8px]">
+          <p className="leading-[normal] mb-0">Madhya Pradesh 455001</p>
+          <p className="leading-[normal]">&nbsp;</p>
+        </div>
       </div>
-      <div className="absolute h-[95px] left-[63px] shadow-[0px_4px_25.9px_0px_rgba(0,0,0,0.25)] top-[32px] w-[1357px]" data-name="Navbar">
+      <div className="absolute h-[61px] left-[1134px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[765px] w-[59px]" data-name="Location">
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgLocation} />
+      </div>
+      <div className="absolute h-[64px] left-[669px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[758px] w-[79px]" data-name="Mail Contact">
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgMailContact} />
+      </div>
+      <div className="absolute h-[95px] left-[62px] shadow-[0px_4px_25.9px_0px_rgba(0,0,0,0.25)] top-[38px] w-[1357px]" data-name="Navbar">
         <div className="absolute inset-[20%_3.1%_21.05%_0]">
           <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1315 56">
             <foreignObject height="256" width="1515" x="-100" y="-100">
@@ -169,16 +195,16 @@ export default function Sweets() {
           <p className="[text-decoration-skip-ink:none] decoration-solid leading-[normal] mb-0">&nbsp;</p>
           <p className="[text-decoration-skip-ink:none] decoration-solid leading-[normal]">&nbsp;</p>
         </div>
-        <div className="absolute flex flex-col font-['Inter:Light',sans-serif] font-light inset-[18.95%_40.9%_20%_45.32%] justify-end leading-[0] lowercase not-italic text-[#22c55e] text-[16px] tracking-[-0.8px]">
+        <div className="absolute flex flex-col font-['Inter:Light',sans-serif] font-light inset-[18.95%_40.9%_20%_45.32%] justify-end leading-[0] lowercase not-italic text-[16px] text-black tracking-[-0.8px]">
           <p className="leading-[normal] mb-0">&nbsp;</p>
-          <p className="[text-decoration-skip-ink:none] capitalize decoration-solid font-['Inter:Black',sans-serif] font-black leading-[normal] mb-0 underline">Sweets</p>
+          <p className="capitalize font-['Inter:Medium',sans-serif] font-medium leading-[normal] mb-0">Sweets</p>
           <p className="leading-[normal]">&nbsp;</p>
         </div>
         <div className="absolute flex flex-col font-['Inter:Medium',sans-serif] font-medium inset-[22.11%_35.08%_38.95%_59.62%] justify-end leading-[0] not-italic text-[16px] text-black tracking-[-0.8px]">
           <p className="leading-[normal]">About</p>
         </div>
-        <div className="absolute flex flex-col font-['Inter:Medium',sans-serif] font-medium inset-[22.11%_25.87%_38.95%_65.36%] justify-end leading-[0] not-italic text-[16px] text-black tracking-[-0.8px]">
-          <p className="leading-[normal]">Contact Us</p>
+        <div className="absolute flex flex-col font-['Inter:Black',sans-serif] font-black inset-[22.11%_25.87%_38.95%_65.36%] justify-end leading-[0] not-italic text-[#16a34a] text-[16px] tracking-[-0.8px]">
+          <p className="[text-decoration-skip-ink:none] decoration-solid leading-[normal] underline">Contact Us</p>
         </div>
         <div className="absolute flex flex-col font-['Inter:Medium',sans-serif] font-medium inset-[12.63%_39.43%_18.95%_51.36%] justify-end leading-[0] not-italic text-[16px] text-black tracking-[-0.8px] whitespace-pre-wrap">
           <p className="leading-[normal] mb-0">&nbsp;</p>
@@ -187,7 +213,7 @@ export default function Sweets() {
         </div>
         <Group3 />
       </div>
-      <div className="absolute h-[537px] left-px top-[1401px] w-[1440px]" data-name="Footer Section">
+      <div className="absolute h-[537px] left-0 top-[1779px] w-[1440px]" data-name="Footer Section">
         <div className="absolute bg-black inset-0" />
         <p className="absolute font-['Inter:Black',sans-serif] font-black inset-[8.01%_75.56%_83.05%_7.57%] leading-[0] not-italic text-[40px] text-black text-center tracking-[-2px]">
           <span className="leading-[normal] text-white">Naveen</span>
