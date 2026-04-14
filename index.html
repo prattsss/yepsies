@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Dairy - Pure Milk & Authentic Sweets</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="logo">
+            <div class="logo-circle">
+                <span class="logo-text">N</span>
+            </div>
+        </div>
+        <div class="brand-name">
+            Naveen <span class="dairy">Dairy</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dairy-products.html">Dairy Products</a></li>
+            <li><a href="sweets.html">Sweets</a></li>
+            <li><a href="bulk-orders.html">Bulk Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="order-btn" onclick="orderOnWhatsApp('General Inquiry', '')">
+            <img src="imgs/LandingPage/7d22d0f8b6818aab4403a0caeee0340d70e9e065.png" alt="Phone" class="phone-icon">
+            Order Now
+        </a>
+    </nav>
+
+    <!-- Hero Slider -->
+    <div class="hero">
+        <!-- Slide 1: Milk -->
+        <div class="slide active" style="position: absolute; inset: 0; background: linear-gradient(180deg, #064e3b 0%, #22c55e 50%, #14532d 100%);">
+            <div style="position: absolute; left: 117px; top: 350px; font-family: 'Archivo Black', sans-serif; font-size: 168px; color: #b7ffd4; text-shadow: 24px 4px 4.5px rgba(0, 0, 0, 0.25); letter-spacing: -15.1px; line-height: 0.9;">
+                Fresh<br>Buffalo
+            </div>
+            <div style="position: absolute; left: 256px; top: 178px; font-family: 'Lalezar', cursive; font-size: 17px; color: black; text-transform: uppercase;">
+                Taste of Purity
+            </div>
+            <div style="position: absolute; height: 2.5px; background: black; left: 140px; top: 191px; width: 112px;"></div>
+            <div style="position: absolute; height: 2.5px; background: black; left: 453px; top: 191px; width: 112px;"></div>
+            <div style="position: absolute; left: 161px; top: 742px; font-weight: 200; font-size: 24px; color: #dfdfdf; letter-spacing: -1.2px; line-height: 1.4; max-width: 780px;">
+                Pure, thick, and delivered fresh every morning. Our<br> buffalo milk is nature's perfect nutrition.
+            </div>
+            <div style="position: absolute; left: 331px; top: 374px; font-family: 'Luxurious Script', cursive; font-size: 359px; color: white; text-shadow: 23px 4px 4px rgba(0, 0, 0, 0.25); letter-spacing: -18px;">
+                Milk
+            </div>
+            <img src="imgs/LandingPage/1d71888a7bb4c76c8ecc35e8fd0d2ff3269c6846.png" alt="Milk" style="position: absolute; left: 798px; top: 191px; width: 562px; height: 722px; border-radius: 114px; object-fit: cover;">
+
+            <div class="cta-buttons" style="left: 154px; top: 829px;">
+                <a href="bulk-orders.html" class="btn btn-secondary">Bulk Order</a>
+                <a href="#" onclick="orderOnWhatsApp('Fresh Buffalo Milk', '₹65/Litre')" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Slide 2: Paneer -->
+        <div class="slide" style="position: absolute; inset: 0; background: linear-gradient(180.946deg, rgb(45, 185, 100) 38.047%, rgb(80, 254, 149) 34.047%, rgb(20, 83, 45) 88.468%);">
+            <div style="position: absolute; left: 117px; top: 350px; font-family: 'Archivo Black', sans-serif; font-size: 168px; color: #b7ffd4; text-shadow: 24px 4px 4.5px rgba(0, 0, 0, 0.25); letter-spacing: -15.1px; line-height: 0.9;">
+                Fresh<br>Malai
+            </div>
+            <div style="position: absolute; left: 256px; top: 178px; font-family: 'Lalezar', cursive; font-size: 17px; color: black; text-transform: uppercase;">
+                The heart of your kitchen
+            </div>
+            <div style="position: absolute; height: 2.5px; background: black; left: 140px; top: 191px; width: 112px;"></div>
+            <div style="position: absolute; height: 2.5px; background: black; left: 474px; top: 191px; width: 92px;"></div>
+            <div style="position: absolute; left: 161px; top: 742px; font-weight: 200; font-size: 24px; color: #141010; letter-spacing: -1.2px; line-height: 1.4; max-width: 780px;">
+                Soft, spongy, and rich in protein. Our paneer is<br> made fresh every morning.
+            </div>
+            <div style="position: absolute; left: 249px; top: 367px; font-family: 'Luxurious Script', cursive; font-size: 359px; color: white; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); letter-spacing: -18px;">
+                Paneer
+            </div>
+            <img src="imgs/Slider2/1d71888a7bb4c76c8ecc35e8fd0d2ff3269c6846.png" alt="Paneer" style="position: absolute; left: 798px; top: 191px; width: 562px; height: 722px; border-radius: 114px; object-fit: cover;">
+
+            <div class="cta-buttons" style="left: 154px; top: 829px;">
+                <a href="bulk-orders.html" class="btn btn-secondary">Bulk Order</a>
+                <a href="#" onclick="orderOnWhatsApp('Fresh Malai Paneer', '₹65/kg')" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Slide 3: Kaju Katli -->
+        <div class="slide" style="position: absolute; inset: 0; background: linear-gradient(183.711deg, rgb(138, 203, 41) 32.151%, rgb(165, 200, 119) 61.434%, rgb(64, 98, 18) 85.599%);">
+            <div style="position: absolute; left: 59px; top: 350px; font-family: 'Archivo Black', sans-serif; font-size: 168px; color: #d8ffa6; text-shadow: 17px 4px 0px rgba(0, 0, 0, 0.25); letter-spacing: -15.1px; line-height: 0.9;">
+                Authentic<br>Kaju
+            </div>
+            <div style="position: absolute; left: 256px; top: 178px; font-family: 'Lalezar', cursive; font-size: 17px; color: black; text-transform: uppercase;">
+                Sweetness of tradition
+            </div>
+            <div style="position: absolute; height: 2.5px; background: black; left: 140px; top: 191px; width: 112px;"></div>
+            <div style="position: absolute; height: 2.5px; background: black; left: 453px; top: 191px; width: 112px;"></div>
+            <div style="position: absolute; left: 165px; top: 740px; font-weight: 200; font-size: 24px; color: #dfdfdf; letter-spacing: -1.2px; line-height: 1.4; max-width: 780px;">
+                Premium cashews and pure sugar. The perfect treat for<br> every celebration.
+            </div>
+            <div style="position: absolute; left: 331px; top: 374px; font-family: 'Luxurious Script', cursive; font-size: 359px; color: white; text-shadow: 23px 4px 4px rgba(0, 0, 0, 0.25); letter-spacing: -18px;">
+                Katli
+            </div>
+            <img src="imgs/Slider3/kajuKatli.png" alt="Kaju Katli" style="position: absolute; left: 852px; top: 215px; width: 528px; height: 713px; border-radius: 99px; object-fit: cover;">
+
+            <div class="cta-buttons" style="left: 140px; top: 823px;">
+                <a href="bulk-orders.html" class="btn btn-secondary">Bulk Order</a>
+                <a href="#" onclick="orderOnWhatsApp('Authentic Kaju Katli', '₹800/kg')" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo" style="position: relative; margin-bottom: 20px;">
+                    <div class="logo-circle" style="width: 52px; height: 52px;">
+                        <span class="logo-text" style="font-size: 51px; left: 10px;">N</span>
+                    </div>
+                </div>
+                <h2>Naveen <span class="dairy">Dairy</span></h2>
+                <p>Bringing the purest dairy products and authentic Indian sweets</p>
+                <p>from our farm to your family since 1995.</p>
+                <p>&nbsp;</p>
+                <p>Quality you can trust, taste you'll love.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dairy-products.html">Dairy Products</a></li>
+                    <li><a href="sweets.html">Authentic Sweets</a></li>
+                    <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Main Market, Dewas, Madhya Pradesh</p>
+                <p>4550251</p>
+                <p>+91 98765 434500</p>
+                <p>info@naveendairy.com</p>
+
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <img src="imgs/LandingPage/94e2fda64aad88d569d51dc99218b35246d52168.png" alt="WhatsApp">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="imgs/LandingPage/28b4cecf40a3673d46d70ebfa07b6113c29bb090.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="imgs/LandingPage/287100addff7b4b1be96237c455d31e111806645.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

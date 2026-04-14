@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Orders - Naveen Dairy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .bulk-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 180px 120px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .bulk-categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: #f7f7f7;
+            border: 2px dashed #474747;
+            border-radius: 33px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0px 4px 12.4px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+        }
+
+        .category-title {
+            font-weight: 500;
+            font-size: 24px;
+            color: black;
+            letter-spacing: -1.2px;
+            margin-bottom: 15px;
+        }
+
+        .category-desc {
+            font-weight: 200;
+            font-size: 12px;
+            color: #7a7a7a;
+            letter-spacing: -0.6px;
+            line-height: 1.5;
+        }
+
+        .why-choose {
+            background: #0d7b38;
+            border-radius: 33px;
+            padding: 40px;
+            box-shadow: 0px 4px 19.1px 16px rgba(0, 0, 0, 0.25);
+            margin-top: 40px;
+        }
+
+        .why-choose h2 {
+            font-family: 'Luxurious Script', cursive;
+            font-size: 89px;
+            color: white;
+            letter-spacing: -4.44px;
+            margin-bottom: 30px;
+        }
+
+        .why-list {
+            list-style: none;
+        }
+
+        .why-list li {
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            letter-spacing: -0.8px;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .why-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 19px;
+            background: var(--primary-green);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .enquiry-form {
+            background: #f7f7f7;
+            border: 5px solid white;
+            border-radius: 33px;
+            padding: 40px;
+            box-shadow: 0px 4px 125.6px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        .enquiry-form h2 {
+            font-family: 'Luxurious Script', cursive;
+            font-size: 92px;
+            color: black;
+            letter-spacing: -4.59px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            font-size: 18px;
+            color: black;
+            letter-spacing: -0.88px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: #f2f2f2;
+            border: 1px solid #c4c4c4;
+            border-radius: 17px;
+            padding: 18px 20px;
+            font-size: 16px;
+            box-shadow: 0px 4px 26.5px 7px rgba(0, 0, 0, 0.25);
+        }
+
+        .form-group textarea {
+            min-height: 104px;
+            resize: vertical;
+        }
+
+        .form-group-half {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary-green);
+            color: black;
+            padding: 23px;
+            border-radius: 17px;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: -1.2px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 4px 16.1px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--hover-green);
+            transform: translateY(-2px);
+        }
+
+        .quote-box {
+            background: rgba(34, 197, 94, 0.42);
+            border-radius: 52px;
+            padding: 35px;
+            margin-top: 30px;
+        }
+
+        .quote-box p {
+            font-weight: 900;
+            font-size: 28px;
+            color: #042712;
+            letter-spacing: 0.84px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="logo">
+            <div class="logo-circle">
+                <span class="logo-text">N</span>
+            </div>
+        </div>
+        <div class="brand-name">
+            Naveen <span class="dairy">Dairy</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dairy-products.html">Dairy Products</a></li>
+            <li><a href="sweets.html">Sweets</a></li>
+            <li><a href="bulk-orders.html">Bulk Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="order-btn" onclick="orderOnWhatsApp('General Inquiry', '')">
+            <img src="imgs/BulkOrders/7d22d0f8b6818aab4403a0caeee0340d70e9e065.png" alt="Phone" class="phone-icon">
+            Order Now
+        </a>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="page-title">
+            Bulk
+            <span class="page-title-accent">Orders</span>
+        </h1>
+        <p class="page-description">
+            Planning a wedding, party, or corporate event? We provide fresh paneer, milk, and sweets in bulk quantities with guaranteed quality and timely delivery.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="bulk-content">
+        <!-- Left Column -->
+        <div>
+            <div class="bulk-categories">
+                <div class="category-card">
+                    <img src="imgs/BulkOrders/244433b7f473218d50ba45599c4eaca64c45f165.png" alt="Weddings" class="category-icon">
+                    <h3 class="category-title">Weddings</h3>
+                    <p class="category-desc">Specialized sweets and dairy supply for your big day.</p>
+                </div>
+
+                <div class="category-card">
+                    <img src="imgs/BulkOrders/244433b7f473218d50ba45599c4eaca64c45f165.png" alt="Parties" class="category-icon">
+                    <h3 class="category-title">Parties</h3>
+                    <p class="category-desc">Fresh snacks and sweets for birthdays and anniversaries.</p>
+                </div>
+
+                <div class="category-card">
+                    <img src="imgs/BulkOrders/244433b7f473218d50ba45599c4eaca64c45f165.png" alt="Corporate" class="category-icon">
+                    <h3 class="category-title">Corporate</h3>
+                    <p class="category-desc">Regular supply for hotels, restaurants, and offices.</p>
+                </div>
+
+                <div class="category-card">
+                    <img src="imgs/BulkOrders/244433b7f473218d50ba45599c4eaca64c45f165.png" alt="Custom" class="category-icon">
+                    <h3 class="category-title">Custom</h3>
+                    <p class="category-desc">Tailored packages based on your specific needs.</p>
+                </div>
+            </div>
+
+            <div class="why-choose">
+                <h2>Why choose us?</h2>
+                <ul class="why-list">
+                    <li>Guaranteed freshness for large quantities</li>
+                    <li>Competitive wholesale pricing</li>
+                    <li>Dedicated delivery team for events</li>
+                </ul>
+            </div>
+
+            <div class="quote-box">
+                <p>Made with love,<br>served with purity.</p>
+            </div>
+        </div>
+
+        <!-- Right Column - Enquiry Form -->
+        <div class="enquiry-form">
+            <h2>Enquiry Form</h2>
+            <form onsubmit="return handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="Full Name" required>
+                </div>
+
+                <div class="form-group-half">
+                    <div class="form-group">
+                        <label for="eventType">Event Type</label>
+                        <select id="eventType" name="Event Type" required>
+                            <option value="">Select</option>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Birthday Party">Birthday Party</option>
+                            <option value="Corporate Event">Corporate Event</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Approx Quantity</label>
+                        <input type="text" id="quantity" name="Approx Quantity" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate" name="Event Date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Requirements</label>
+                    <textarea id="message" name="Message"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Enquire now on whatsapp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo" style="position: relative; margin-bottom: 20px;">
+                    <div class="logo-circle" style="width: 52px; height: 52px;">
+                        <span class="logo-text" style="font-size: 51px; left: 10px;">N</span>
+                    </div>
+                </div>
+                <h2>Naveen <span class="dairy">Dairy</span></h2>
+                <p>Bringing the purest dairy products and authentic Indian sweets</p>
+                <p>from our farm to your family since 1995.</p>
+                <p>&nbsp;</p>
+                <p>Quality you can trust, taste you'll love.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dairy-products.html">Dairy Products</a></li>
+                    <li><a href="sweets.html">Authentic Sweets</a></li>
+                    <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Main Market, Dewas, Madhya Pradesh</p>
+                <p>4550251</p>
+                <p>+91 98765 434500</p>
+                <p>info@naveendairy.com</p>
+
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <img src="imgs/BulkOrders/94e2fda64aad88d569d51dc99218b35246d52168.png" alt="WhatsApp">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="imgs/BulkOrders/28b4cecf40a3673d46d70ebfa07b6113c29bb090.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="imgs/BulkOrders/287100addff7b4b1be96237c455d31e111806645.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
