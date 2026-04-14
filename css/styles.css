@@ -138,9 +138,9 @@ body {
     transition: color 0.2s, text-decoration 0.2s, font-weight 0.2s;
 }
 
-.navbar .nav-links a[href='sweets.html'] {
+/* .navbar .nav-links a[href='sweets.html'] {
     text-transform: lowercase;
-}
+} */
 
 .navbar .nav-links a:hover {
     color: var(--primary-green);
@@ -150,6 +150,7 @@ body {
     color: #22c55e;
     font-weight: 900;
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .navbar .nav-links a:not(.active) {
@@ -198,9 +199,9 @@ body.index-page .navbar .brand-name {
     color: #fff;
 }
 
-body.index-page .navbar .brand-name .dairy {
+/* body.index-page .navbar .brand-name .dairy {
     color: #bbf7d0;
-}
+} */
 
 body.index-page .navbar .nav-links a:not(.active) {
     color: rgba(255, 255, 255, 0.95);
