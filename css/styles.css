@@ -68,12 +68,12 @@ body {
     left: 1.11%;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
+    /* width: 40px;
     height: 40px;
-    flex-shrink: 0;
+    flex-shrink: 0; */
 }
 
-.navbar .logo-circle {
+/* .navbar .logo-circle {
     position: absolute;
     inset: 0;
     display: flex;
@@ -88,15 +88,15 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    line-height: 1;
     color: #f0fdf4;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: block;
-}
+    margin: 0;
+    line-height: 1;
+} */
 
 .navbar .brand-name {
     position: absolute;
-    left: calc(1.11% + 40px + 12px);
+    left: calc(1.11% + 40px + 8px);
     top: 50%;
     transform: translateY(-50%);
     display: flex;
