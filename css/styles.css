@@ -811,6 +811,20 @@ a.product-button {
     box-sizing: border-box;
 }
 
+/* Product grid: fluid 4 columns on narrow laptops (between 2-col and fixed desktop) */
+@media (max-width: 1300px) and (min-width: 1101px) {
+    .products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+        max-width: 1240px;
+        padding: 40px 40px;
+    }
+
+    .landing-bestsellers .products-grid {
+        padding: 0 40px;
+    }
+}
+
 @media (max-width: 1100px) {
     .landing-bestsellers .landing-eyebrow {
         max-width: 100%;
@@ -819,10 +833,14 @@ a.product-button {
 
     .products-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 40px 40px;
-        gap: 20px;
+        padding: 40px clamp(20px, 5vw, 40px);
+        gap: clamp(14px, 2vw, 20px);
         width: 100%;
         max-width: 1240px;
+    }
+
+    .product-card {
+        min-height: clamp(480px, 85vw, 579px);
     }
 
     .landing-bestsellers .products-grid {
@@ -965,10 +983,33 @@ a.product-button {
 
     .products-grid {
         grid-template-columns: 1fr;
-        padding: 32px 20px;
+        padding: 24px clamp(16px, 5vw, 24px);
         gap: 16px;
         width: 100%;
-        max-width: 1240px;
+        max-width: min(1240px, 100%);
+    }
+
+    .product-card {
+        min-height: clamp(440px, 118vw, 520px);
+        border-radius: clamp(40px, 12vw, 52px) clamp(38px, 11vw, 49px) clamp(36px, 10vw, 47px) clamp(42px, 12vw, 53px);
+        padding: clamp(14px, 4vw, 20px) clamp(12px, 3.5vw, 17px);
+    }
+
+    .product-card .product-title {
+        font-size: clamp(17px, 4.5vw, 20px);
+    }
+
+    .product-card .product-price {
+        font-size: clamp(13px, 3.5vw, 15px);
+    }
+
+    .product-card .product-description {
+        font-size: clamp(11px, 3.2vw, 12px);
+    }
+
+    .product-card .product-button {
+        font-size: clamp(11px, 3vw, 12.8353px);
+        padding: 0 clamp(8px, 2.5vw, 12px);
     }
 
     .landing-bestsellers .products-grid {
@@ -1258,34 +1299,68 @@ a.product-button {
 
 /* Page Headers */
 .page-header {
-    padding: 6rem 0 0px;
+    padding: 6rem clamp(20px, 5vw, 48px) 0;
     text-align: center;
 }
 
 .page-title {
     font-weight: 900;
-    font-size: 131px;
-    letter-spacing: -6.53px;
+    font-size: clamp(42px, 11vw, 131px);
+    letter-spacing: clamp(-4px, -0.4vw, -6.53px);
     color: black;
+    line-height: 0.95;
 }
 
 .page-title-accent {
     font-family: 'Luxurious Script', cursive;
     font-weight: 400;
-    font-size: 239px;
+    font-size: clamp(72px, 20vw, 239px);
     color: #1dc95d;
-    letter-spacing: -11.95px;
+    letter-spacing: clamp(-6px, -0.5vw, -11.95px);
     display: inline-block;
-    /* margin-left: 20px; */
+    line-height: 0.85;
 }
 
 .page-description {
     font-weight: 200;
-    font-size: 23px;
-    letter-spacing: -1.13px;
-    max-width: 753px;
-    margin: -1rem auto 2rem;
+    font-size: clamp(16px, 2.8vw, 23px);
+    letter-spacing: clamp(-0.5px, -0.08vw, -1.13px);
+    max-width: min(753px, 100%);
+    margin: clamp(-0.5rem, -1vw, -1rem) auto clamp(1.25rem, 4vw, 2rem);
     line-height: 1.6;
+    padding: 0 clamp(8px, 3vw, 24px);
+}
+
+@media (max-width: 1100px) {
+    .page-header {
+        padding-top: clamp(4.5rem, 12vw, 6rem);
+    }
+
+    .page-title-accent {
+        display: block;
+        margin-top: clamp(-0.25rem, -1vw, 0);
+    }
+}
+
+@media (max-width: 700px) {
+    .page-header {
+        padding-top: clamp(4rem, 14vw, 5rem);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .page-title {
+        font-size: clamp(36px, 14vw, 64px);
+    }
+
+    .page-title-accent {
+        font-size: clamp(56px, 22vw, 110px);
+    }
+
+    .page-description {
+        font-size: clamp(15px, 4vw, 18px);
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* Utility Classes */
