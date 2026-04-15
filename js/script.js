@@ -76,7 +76,7 @@ class HeroSlider {
     }
 
     startAutoPlay() {
-        this.autoPlayInterval = setInterval(() => this.nextSlide(), 30000);
+        this.autoPlayInterval = setInterval(() => this.nextSlide(), 3000);
     }
 
     resetAutoPlay() {

@@ -153,8 +153,18 @@
 .slider .btn {
     padding: 20px 26px;
     border-radius: 999px;
-    font-size: clamp(14px, 1.5vw, 17px);
+    font-size: clamp(16px, 1.5vw, 17px);
     letter-spacing: -0.02em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .slider .btn-primary {
