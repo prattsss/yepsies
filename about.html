@@ -205,6 +205,7 @@
         <div class="brand-name">
             Naveen <span class="dairy">Dairy</span>
         </div>
+        <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="dairy-products.html">Dairy Products</a></li>
@@ -212,11 +213,23 @@
             <li><a href="bulk-orders.html">Bulk Orders</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li class="nav-menu-cta">
+                <a href="#" class="order-btn order-btn--menu" onclick="orderOnWhatsApp('General Inquiry', '')">
+                    <img src="assets/icons/phoneIcon.png" alt="Phone" class="phone-icon">
+                    Order Now
+                </a>
+            </li>
         </ul>
+        </div>
         <a href="#" class="order-btn" onclick="orderOnWhatsApp('General Inquiry', '')">
             <img src="assets/icons/phoneIcon.png" alt="Phone" class="phone-icon">
             Order Now
         </a>
+        <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+            <span class="navbar-toggle-bar" aria-hidden="true"></span>
+            <span class="navbar-toggle-bar" aria-hidden="true"></span>
+            <span class="navbar-toggle-bar" aria-hidden="true"></span>
+        </button>
     </nav>
 
     <!-- About Hero Section -->

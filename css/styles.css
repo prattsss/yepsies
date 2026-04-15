@@ -59,6 +59,8 @@ body {
     border-radius: 28px;
     transition: background 0.25s ease, backdrop-filter 0.25s ease, -webkit-backdrop-filter 0.25s ease, border-color 0.25s ease;
     border: 1px solid transparent;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .navbar.is-scrolled {
@@ -250,6 +252,298 @@ body.index-page .navbar.is-scrolled .nav-links a.active {
 
 body.index-page .navbar.is-scrolled .nav-links a:hover {
     color: #15803d;
+}
+
+/* Navbar — mobile menu wrapper (display:contents keeps desktop absolute layout) */
+.nav-menu {
+    display: contents;
+}
+
+.nav-menu-cta {
+    display: none;
+}
+
+.navbar-toggle {
+    display: none;
+    position: relative;
+    z-index: 1002;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navbar-toggle:hover {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.navbar-toggle:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+.navbar-toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #111;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+body.index-page .navbar-toggle {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.index-page .navbar-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+body.index-page .navbar-toggle-bar {
+    background: #fff;
+}
+
+body.index-page .navbar.is-scrolled .navbar-toggle-bar,
+body.index-page .navbar.is-open .navbar-toggle-bar {
+    background: #111;
+}
+
+body.index-page .navbar.is-scrolled .navbar-toggle,
+body.index-page .navbar.is-open .navbar-toggle {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.nav-menu-open {
+    overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: flex-start;
+        gap: 0 8px;
+        height: auto;
+        min-height: 64px;
+        padding: 10px 12px 10px 10px;
+        width: calc(100vw - 16px);
+        max-width: none;
+        isolation: isolate;
+    }
+
+    .navbar-bg {
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        border-radius: 22px;
+    }
+
+    .navbar .logo,
+    .navbar .brand-name,
+    .navbar > .order-btn,
+    .navbar-toggle {
+        position: relative;
+        z-index: 1;
+    }
+
+    .navbar .logo {
+        left: auto;
+        top: auto;
+        transform: none;
+        flex-shrink: 0;
+    }
+
+    .navbar .logo .logo-image {
+        width: clamp(36px, 9vw, 44px);
+        height: auto;
+    }
+
+    .navbar .brand-name {
+        left: auto;
+        top: auto;
+        transform: none;
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: clamp(17px, 4.2vw, 22px);
+        line-height: 1.2;
+    }
+
+    .navbar .order-btn {
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        flex-shrink: 0;
+        font-size: clamp(12px, 2.8vw, 16px);
+        padding: 0 clamp(10px, 2.5vw, 14px);
+        min-height: 40px;
+    }
+
+    .navbar .order-btn .phone-icon {
+        width: clamp(14px, 3.5vw, 16px);
+        height: clamp(14px, 3.5vw, 16px);
+    }
+
+    .navbar-toggle {
+        display: flex;
+        margin-left: auto;
+        z-index: 4;
+    }
+
+    .navbar.is-open .navbar-toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar.is-open .navbar-toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.is-open .navbar-toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        display: block;
+        flex-basis: 100%;
+        width: 100%;
+        order: 10;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .navbar.is-open .nav-menu {
+        max-height: min(85vh, 520px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        pointer-events: auto;
+    }
+
+    .navbar .nav-links {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 4px 0 12px;
+        margin: 0;
+        z-index: 2;
+    }
+
+    .navbar .nav-links li {
+        list-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        padding: 14px 6px;
+        font-size: clamp(15px, 3.8vw, 17px);
+        line-height: 1.35;
+        color: #111 !important;
+        font-weight: 600 !important;
+        position: relative;
+        z-index: 3;
+    }
+
+    .navbar .order-btn--menu {
+        position: static;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 8px 0 0;
+        min-height: 48px;
+        border-radius: 26px;
+        color: #fff !important;
+        font-weight: 900 !important;
+    }
+
+    .navbar .order-btn--menu:hover {
+        color: #fff !important;
+    }
+
+    .navbar .nav-links a.active {
+        color: var(--hover-green) !important;
+        text-decoration: none;
+        border-left: 3px solid var(--primary-green);
+        padding-left: 10px;
+    }
+
+    .navbar .nav-links a:hover {
+        color: var(--hover-green) !important;
+    }
+
+    body.index-page .navbar .nav-links a:not(.active) {
+        color: #111 !important;
+    }
+
+    body.index-page .navbar .nav-links a.active {
+        color: var(--hover-green) !important;
+        text-decoration: none;
+        text-decoration-color: transparent;
+    }
+}
+
+/* Narrow phones: one row = logo + hamburger; Order lives in the menu panel */
+@media (max-width: 700px) {
+    .navbar .brand-name {
+        display: none !important;
+    }
+
+    .navbar > .order-btn {
+        display: none !important;
+    }
+
+    .nav-menu-cta {
+        display: list-item;
+        list-style: none;
+        display: flex;
+        border-bottom: none !important;
+        margin-top: 4px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+        width: calc(100vw - 12px);
+    }
+
+    .navbar .order-btn {
+        padding: 0 10px;
+    }
 }
 
 /* Footer / static: same mark, centered N (no Figma absolute layers) */
@@ -1406,7 +1700,7 @@ a.product-button {
 
 @media (max-width: 700px) {
     .page-header {
-        padding-top: clamp(4rem, 14vw, 5rem);
+        padding-top: clamp(6rem, 14vw, 5rem);
         padding-left: 16px;
         padding-right: 16px;
     }

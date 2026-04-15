@@ -126,6 +126,54 @@ function initNavbarScrollState() {
     window.addEventListener("scroll", applyScrollState, { passive: true });
 }
 
+function initNavbarMobileMenu() {
+    const navbar = document.querySelector(".navbar");
+    const toggle = document.querySelector(".navbar-toggle");
+    const menu = document.getElementById("nav-menu");
+    if (!navbar || !toggle || !menu) return;
+
+    const close = () => {
+        navbar.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+        document.body.classList.remove("nav-menu-open");
+    };
+
+    const open = () => {
+        navbar.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        toggle.setAttribute("aria-label", "Close menu");
+        document.body.classList.add("nav-menu-open");
+    };
+
+    toggle.addEventListener("click", () => {
+        if (navbar.classList.contains("is-open")) close();
+        else open();
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", close);
+    });
+
+    const orderBtn = document.querySelector(".navbar > .order-btn");
+    if (orderBtn) orderBtn.addEventListener("click", close);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+    });
+
+    const mq = window.matchMedia("(min-width: 1101px)");
+    const onBreakpoint = () => {
+        if (mq.matches) close();
+    };
+    if (typeof mq.addEventListener === "function") {
+        mq.addEventListener("change", onBreakpoint);
+    } else if (typeof mq.addListener === "function") {
+        mq.addListener(onBreakpoint);
+    }
+    window.addEventListener("resize", onBreakpoint);
+}
+
 function bindSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", (event) => {
@@ -156,6 +204,7 @@ function initLandingSlider() {
 document.addEventListener("DOMContentLoaded", () => {
     setActiveNavLink();
     initNavbarScrollState();
+    initNavbarMobileMenu();
     bindSmoothScrolling();
     initLandingSlider();
 });
