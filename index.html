@@ -1,285 +1,485 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/icons/Logo.svg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icons/Logo.svg" type="image/x-icon" />
     <title>Naveen Dairy - Pure Milk & Authentic Sweets</title>
-    <link rel="stylesheet" href="css/landing.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="index-page">
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="index-page">
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="navbar-bg"></div>
-        <div class="logo">
-        <img src="assets/icons/Logo.svg" alt="Naveen Dairy Logo" class="logo-image">
-        </div>
-        <div class="brand-name">
-            Naveen <span class="dairy">Dairy</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dairy-products.html">Dairy Products</a></li>
-            <li><a href="sweets.html">Sweets</a></li>
-            <li><a href="bulk-orders.html">Bulk Orders</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <a href="#" class="order-btn" onclick="orderOnWhatsApp('General Inquiry', '')">
-            <img src="assets/icons/phoneIcon.png" alt="Phone" class="phone-icon">
-            Order Now
-        </a>
+      <div class="navbar-bg"></div>
+      <div class="logo">
+        <img
+          src="assets/icons/Logo.svg"
+          alt="Naveen Dairy Logo"
+          class="logo-image"
+        />
+      </div>
+      <div class="brand-name">Naveen <span class="dairy">Dairy</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dairy-products.html">Dairy Products</a></li>
+        <li><a href="sweets.html">Sweets</a></li>
+        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <a
+        href="#"
+        class="order-btn"
+        onclick="orderOnWhatsApp('General Inquiry', '')"
+      >
+        <img src="assets/icons/phoneIcon.png" alt="Phone" class="phone-icon" />
+        Order Now
+      </a>
     </nav>
 
     <!-- Hero Slider -->
     <div class="hero" id="hero-slider">
-
-        <!-- Slider Indicators -->
-        <div class="slider-indicators">
-            <div class="indicator active"></div>
-            <div class="indicator"></div>
-            <div class="indicator"></div>
-        </div>
+      <!-- Slider Indicators -->
+      <div class="slider-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+      </div>
     </div>
 
     <main class="landing-main">
-        <!-- Most Selling Items (image-3 / LandingPage) -->
-        <section class="landing-section landing-bestsellers" id="bestsellers" aria-labelledby="landing-bestsellers-title">
-            <p class="landing-eyebrow">Our favourites</p>
-            <h2 class="landing-bestsellers-heading" id="landing-bestsellers-title">
-                <span class="landing-bestsellers-title-text">Most Selling</span>
-                <span class="landing-bestsellers-title-script">Items</span>
+      <!-- Most Selling Items (image-3 / LandingPage) -->
+      <section
+        class="landing-section landing-bestsellers"
+        id="bestsellers"
+        aria-labelledby="landing-bestsellers-title"
+      >
+        <p class="landing-eyebrow">Our favourites</p>
+        <h2 class="landing-bestsellers-heading" id="landing-bestsellers-title">
+          <span class="landing-bestsellers-title-text">Most Selling</span>
+          <span class="landing-bestsellers-title-script">Items</span>
+        </h2>
+        <p class="landing-lead">
+          Discover our most loved products, chosen by thousands of families in
+          Dewas for their purity and taste.
+        </p>
+        <div class="landing-products-grid">
+          <article class="product-card landing-product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/imgs/LandingPage/dairyCardMain.png"
+                alt="Fresh Buffalo Milk"
+                class="product-image"
+              />
+            </div>
+            <h3 class="product-title">Fresh Buffalo<br />Milk</h3>
+            <p class="product-price">₹65 / Litre</p>
+            <p class="product-description">
+              Pure, thick, and fresh buffalo milk delivered straight from our
+              dairy farm.
+            </p>
+            <a href="dairy-products.html" class="product-button"
+              >Order now on whatsapp</a
+            >
+          </article>
+          <article class="product-card landing-product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/imgs/LandingPage/dairyCardMain.png"
+                alt="Fresh Malai Paneer"
+                class="product-image"
+              />
+            </div>
+            <h3 class="product-title">Fresh Malai<br />Paneer</h3>
+            <p class="product-price">₹65 / kg</p>
+            <p class="product-description">
+              Soft, spongy paneer made fresh every morning from pure buffalo
+              milk.
+            </p>
+            <a href="dairy-products.html" class="product-button"
+              >Order now on whatsapp</a
+            >
+          </article>
+          <article class="product-card landing-product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/imgs/LandingPage/dairyCardMain.png"
+                alt="Pure Desi Ghee"
+                class="product-image"
+              />
+            </div>
+            <h3 class="product-title">Pure Desi<br />Ghee</h3>
+            <p class="product-price">₹580 / kg</p>
+            <p class="product-description">
+              Traditional aroma and rich taste from slow-churned cultured
+              butter.
+            </p>
+            <a href="dairy-products.html" class="product-button"
+              >Order now on whatsapp</a
+            >
+          </article>
+          <article class="product-card landing-product-card">
+            <div class="product-image-wrap">
+              <img
+                src="assets/imgs/LandingPage/dairyCardMain.png"
+                alt="White Butter Makkhan"
+                class="product-image"
+              />
+            </div>
+            <h3 class="product-title">White Butter<br />(Makkhan)</h3>
+            <p class="product-price">₹120 / 250g</p>
+            <p class="product-description">
+              Creamy, fresh churned butter — perfect with parathas and sweets.
+            </p>
+            <a href="dairy-products.html" class="product-button"
+              >Order now on whatsapp</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="landing-quality"
+        id="quality"
+        aria-labelledby="landing-quality-title"
+      >
+        <div class="landing-quality-inner">
+          <div class="landing-quality-copy">
+            <p class="landing-eyebrow landing-eyebrow--muted">
+              Freshness in every drop
+            </p>
+            <h2 class="landing-quality-title" id="landing-quality-title">
+              <span class="landing-quality-title-line">Quality</span>
+              <span class="landing-quality-title-script">Assurance</span>
             </h2>
-            <p class="landing-lead">Discover our most loved products, chosen by thousands of families in Dewas for their purity and taste.</p>
-            <div class="landing-products-grid">
-                <article class="product-card landing-product-card">
-                    <div class="product-image-wrap">
-                        <img src="assets/imgs/LandingPage/dairyCardMain.png" alt="Fresh Buffalo Milk" class="product-image">
-                    </div>
-                    <h3 class="product-title">Fresh Buffalo<br>Milk</h3>
-                    <p class="product-price">₹65 / Litre</p>
-                    <p class="product-description">Pure, thick, and fresh buffalo milk delivered straight from our dairy farm.</p>
-                    <a href="dairy-products.html" class="product-button">Order now on whatsapp</a>
-                </article>
-                <article class="product-card landing-product-card">
-                    <div class="product-image-wrap">
-                        <img src="assets/imgs/LandingPage/dairyCardMain.png" alt="Fresh Malai Paneer" class="product-image">
-                    </div>
-                    <h3 class="product-title">Fresh Malai<br>Paneer</h3>
-                    <p class="product-price">₹65 / kg</p>
-                    <p class="product-description">Soft, spongy paneer made fresh every morning from pure buffalo milk.</p>
-                    <a href="dairy-products.html" class="product-button">Order now on whatsapp</a>
-                </article>
-                <article class="product-card landing-product-card">
-                    <div class="product-image-wrap">
-                        <img src="assets/imgs/LandingPage/dairyCardMain.png" alt="Pure Desi Ghee" class="product-image">
-                    </div>
-                    <h3 class="product-title">Pure Desi<br>Ghee</h3>
-                    <p class="product-price">₹580 / kg</p>
-                    <p class="product-description">Traditional aroma and rich taste from slow-churned cultured butter.</p>
-                    <a href="dairy-products.html" class="product-button">Order now on whatsapp</a>
-                </article>
-                <article class="product-card landing-product-card">
-                    <div class="product-image-wrap">
-                        <img src="assets/imgs/LandingPage/dairyCardMain.png" alt="White Butter Makkhan" class="product-image">
-                    </div>
-                    <h3 class="product-title">White Butter<br>(Makkhan)</h3>
-                    <p class="product-price">₹120 / 250g</p>
-                    <p class="product-description">Creamy, fresh churned butter — perfect with parathas and sweets.</p>
-                    <a href="dairy-products.html" class="product-button">Order now on whatsapp</a>
-                </article>
+            <p class="landing-quality-text">
+              At Naveen Milk Products, we believe that purity is the foundation
+              of health. Our state-of-the-art processing unit ensures every drop
+              of milk and every gram of sweet meets the highest hygiene
+              standards.
+            </p>
+            <ul class="landing-checklist">
+              <li>
+                <img
+                  src="assets/imgs/LandingPage/checkIcon.png"
+                  alt=""
+                  width="25"
+                  height="19"
+                />
+                FSSAI Certified
+              </li>
+              <li>
+                <img
+                  src="assets/imgs/LandingPage/checkIcon.png"
+                  alt=""
+                  width="25"
+                  height="19"
+                />
+                Daily Lab Testing
+              </li>
+              <li>
+                <img
+                  src="assets/imgs/LandingPage/checkIcon.png"
+                  alt=""
+                  width="25"
+                  height="19"
+                />
+                Cold Chain Logistics
+              </li>
+              <li>
+                <img
+                  src="assets/imgs/LandingPage/checkIcon.png"
+                  alt=""
+                  width="25"
+                  height="19"
+                />
+                No Added Preservatives
+              </li>
+              <li>
+                <img
+                  src="assets/imgs/LandingPage/checkIcon.png"
+                  alt=""
+                  width="25"
+                  height="19"
+                />Stat Badge: 25+ Years of excellence in dairy and sweets.
+              </li>
+            </ul>
+          </div>
+          <div class="landing-quality-media">
+            <img
+              src="assets/imgs/LandingPage/paneer.png"
+              alt="Fresh dairy at Naveen Dairy"
+              width="528"
+              height="723"
+            />
+            <div class="landing-quality-media-badge">
+              <p>
+                <img
+                  src="assets/icons/heartIcon.png"
+                  alt=""
+                  class="landing-quality-media-badge-icon"
+                />
+                Made with love, served with purity.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="landing-quality" id="quality" aria-labelledby="landing-quality-title">
-            <div class="landing-quality-inner">
-                <div class="landing-quality-copy">
-                    <p class="landing-eyebrow landing-eyebrow--muted">Freshness in every drop</p>
-                    <h2 class="landing-quality-title" id="landing-quality-title">
-                        <span class="landing-quality-title-line">Quality</span>
-                        <span class="landing-quality-title-script">Assurance</span>
-                    </h2>
-                    <p class="landing-quality-text">At Naveen Milk Products, we believe that purity is the foundation of health. Our state-of-the-art processing unit ensures every drop of milk and every gram of sweet meets the highest hygiene standards.</p>
-                    <ul class="landing-checklist">
-                        <li><img src="assets/imgs/LandingPage/checkIcon.png" alt="" width="25" height="19"> FSSAI Certified</li>
-                        <li><img src="assets/imgs/LandingPage/checkIcon.png" alt="" width="25" height="19"> Daily Lab Testing</li>
-                        <li><img src="assets/imgs/LandingPage/checkIcon.png" alt="" width="25" height="19"> Cold Chain Logistics</li>
-                        <li><img src="assets/imgs/LandingPage/checkIcon.png" alt="" width="25" height="19"> No Added Preservatives</li>
-                    </ul>
-                    <p class="landing-quality-badge">25+ years of excellence in dairy and sweets.</p>
-                </div>
-                <div class="landing-quality-media">
-                    <img src="assets/imgs/LandingPage/paneer.png" alt="Fresh dairy at Naveen Dairy" width="528" height="723">
-                </div>
+      <section
+        class="landing-section landing-features"
+        aria-label="Why choose us"
+      >
+        <div class="landing-features-grid">
+          <div class="landing-feature-card">
+            <div class="landing-feature-icon-wrap">
+              <img
+                src="assets/imgs/LandingPage/qualityCheckIcon.png"
+                alt=""
+                class="landing-feature-icon"
+              />
             </div>
-        </section>
+            <h3 class="landing-feature-title">Quality Assured</h3>
+            <p class="landing-feature-text">
+              FSSAI certified and strictly following hygiene protocols
+            </p>
+          </div>
+          <div class="landing-feature-card">
+            <div class="landing-feature-icon-wrap">
+              <img
+                src="assets/imgs/LandingPage/fastDeliveryIcon.png"
+                alt=""
+                class="landing-feature-icon"
+              />
+            </div>
+            <h3 class="landing-feature-title">Daily Delivery</h3>
+            <p class="landing-feature-text">
+              Fresh milk and products delivered to your doorstep every morning.
+            </p>
+          </div>
+          <div class="landing-feature-card">
+            <div class="landing-feature-icon-wrap">
+              <img
+                src="assets/imgs/LandingPage/bulkOrdersIcon.png"
+                alt=""
+                class="landing-feature-icon"
+              />
+            </div>
+            <h3 class="landing-feature-title">Bulk Orders</h3>
+            <p class="landing-feature-text">
+              Specialized supply for weddings, parties, and restaurants.
+            </p>
+          </div>
+          <div class="landing-feature-card">
+            <div class="landing-feature-icon-wrap">
+              <img
+                src="assets/imgs/LandingPage/checkIcon2.png"
+                alt=""
+                class="landing-feature-icon"
+              />
+            </div>
+            <h3 class="landing-feature-title">100% Pure</h3>
+            <p class="landing-feature-text">
+              No adulteration, no preservatives. Just pure dairy goodness.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="landing-section landing-features" aria-label="Why choose us">
-            <div class="landing-features-grid">
-                <div class="landing-feature-card">
-                    <div class="landing-feature-icon-wrap">
-                        <img src="assets/imgs/LandingPage/qualityCheckIcon.png" alt="" class="landing-feature-icon">
-                    </div>
-                    <h3 class="landing-feature-title">Quality Assured</h3>
-                    <p class="landing-feature-text">FSSAI certified and strictly following hygiene protocols</p>
-                </div>
-                <div class="landing-feature-card">
-                    <div class="landing-feature-icon-wrap">
-                        <img src="assets/imgs/LandingPage/fastDeliveryIcon.png" alt="" class="landing-feature-icon">
-                    </div>
-                    <h3 class="landing-feature-title">Daily Delivery</h3>
-                    <p class="landing-feature-text">Fresh milk and products delivered to your doorstep every morning.</p>
-                </div>
-                <div class="landing-feature-card">
-                    <div class="landing-feature-icon-wrap">
-                        <img src="assets/imgs/LandingPage/bulkOrdersIcon.png" alt="" class="landing-feature-icon">
-                    </div>
-                    <h3 class="landing-feature-title">Bulk Orders</h3>
-                    <p class="landing-feature-text">Specialized supply for weddings, parties, and restaurants.</p>
-                </div>
-                <div class="landing-feature-card">
-                    <div class="landing-feature-icon-wrap">
-                        <img src="assets/imgs/LandingPage/checkIcon2.png" alt="" class="landing-feature-icon">
-                    </div>
-                    <h3 class="landing-feature-title">100% Pure</h3>
-                    <p class="landing-feature-text">No adulteration, no preservatives. Just pure dairy goodness.</p>
-                </div>
-            </div>
-        </section>
+      <section
+        class="landing-section landing-gallery"
+        id="gallery"
+        aria-labelledby="landing-gallery-title"
+      >
+        <h2 class="landing-gallery-heading" id="landing-gallery-title">
+          <span class="landing-gallery-title-plain">Our</span>
+          <span class="landing-gallery-title-script">Gallery</span>
+        </h2>
+        <div class="landing-gallery-grid">
+          <figure class="landing-gallery-item landing-gallery-item--hero">
+            <img
+              src="assets/imgs/LandingPage/milkJar.png"
+              alt="Gallery: dairy products"
+            />
+          </figure>
+          <figure class="landing-gallery-item">
+            <img
+              src="assets/imgs/LandingPage/dairyCardMain.png"
+              alt="Gallery: fresh produce"
+            />
+          </figure>
+          <figure class="landing-gallery-item landing-gallery-item--wide">
+            <img
+              src="assets/imgs/LandingPage/kajuKatli.png"
+              alt="Gallery: kitchen"
+            />
+          </figure>
+          <figure class="landing-gallery-item">
+            <img
+              src="assets/imgs/LandingPage/buffaloMilk.png"
+              alt="Gallery: milk"
+            />
+          </figure>
+          <figure class="landing-gallery-item">
+            <img src="assets/imgs/LandingPage/paneer.png" alt="Gallery: farm" />
+          </figure>
+          <figure class="landing-gallery-item">
+            <img
+              src="assets/imgs/LandingPage/milkJar.png"
+              alt="Gallery: spread"
+            />
+          </figure>
+        </div>
+      </section>
 
-        <section class="landing-section landing-gallery" id="gallery" aria-labelledby="landing-gallery-title">
-            <h2 class="landing-gallery-heading" id="landing-gallery-title">
-                <span class="landing-gallery-title-plain">Our</span>
-                <span class="landing-gallery-title-script">Gallery</span>
-            </h2>
-            <div class="landing-gallery-grid">
-                <figure class="landing-gallery-item landing-gallery-item--hero">
-                    <img src="assets/imgs/LandingPage/milkJar.png" alt="Gallery: dairy products">
-                </figure>
-                <figure class="landing-gallery-item">
-                    <img src="assets/imgs/LandingPage/dairyCardMain.png" alt="Gallery: fresh produce">
-                </figure>
-                <figure class="landing-gallery-item landing-gallery-item--wide">
-                    <img src="assets/imgs/LandingPage/kajuKatli.png" alt="Gallery: kitchen">
-                </figure>
-                <figure class="landing-gallery-item">
-                    <img src="assets/imgs/LandingPage/buffaloMilk.png" alt="Gallery: milk">
-                </figure>
-                <figure class="landing-gallery-item">
-                    <img src="assets/imgs/LandingPage/paneer.png" alt="Gallery: farm">
-                </figure>
-                <figure class="landing-gallery-item">
-                    <img src="assets/imgs/LandingPage/milkJar.png" alt="Gallery: spread">
-                </figure>
-            </div>
-        </section>
-
-        <section class="landing-section landing-reviews" id="reviews" aria-labelledby="landing-reviews-title">
-            <h2 class="landing-reviews-heading" id="landing-reviews-title">
-                <span class="landing-reviews-title-plain">What Our</span>
-                <span class="landing-reviews-title-script">Customer Say</span>
-            </h2>
-            <p class="landing-reviews-sub">Trusted by over 10,000+ happy families.</p>
-            <div class="landing-reviews-grid">
-                <blockquote class="landing-review-card">
-                    <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
-                    <p class="landing-review-quote">“The quality of paneer is unmatched. It is so soft and fresh, just like homemade.”</p>
-                    <footer class="landing-review-meta">
-                        <img src="assets/imgs/LandingPage/profile.png" alt="" class="landing-review-avatar" width="72" height="72">
-                        <div>
-                            <cite class="landing-review-name">Rahul Sharma</cite>
-                            <span class="landing-review-place">Dewas</span>
-                        </div>
-                    </footer>
-                </blockquote>
-                <blockquote class="landing-review-card">
-                    <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
-                    <p class="landing-review-quote">“Buffalo milk tastes rich and pure. We’ve been morning customers for three years.”</p>
-                    <footer class="landing-review-meta">
-                        <img src="assets/imgs/LandingPage/rahulSharma.png" alt="" class="landing-review-avatar" width="72" height="72">
-                        <div>
-                            <cite class="landing-review-name">Priya Mehta</cite>
-                            <span class="landing-review-place">Dewas</span>
-                        </div>
-                    </footer>
-                </blockquote>
-                <blockquote class="landing-review-card">
-                    <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
-                    <p class="landing-review-quote">“Bulk sweets for our event were fresh and perfectly packed. Highly recommended.”</p>
-                    <footer class="landing-review-meta">
-                        <img src="assets/imgs/LandingPage/rahulFemale.png" alt="" class="landing-review-avatar" width="72" height="72">
-                        <div>
-                            <cite class="landing-review-name">Amit Verma</cite>
-                            <span class="landing-review-place">Indore</span>
-                        </div>
-                    </footer>
-                </blockquote>
-                <blockquote class="landing-review-card">
-                    <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
-                    <p class="landing-review-quote">“Prompt delivery and honest pricing. Naveen Dairy is our trusted family brand.”</p>
-                    <footer class="landing-review-meta">
-                        <img src="assets/imgs/LandingPage/rahul2.png" alt="" class="landing-review-avatar" width="72" height="72">
-                        <div>
-                            <cite class="landing-review-name">Sneha Patil</cite>
-                            <span class="landing-review-place">Dewas</span>
-                        </div>
-                    </footer>
-                </blockquote>
-            </div>
-        </section>
+      <section
+        class="landing-section landing-reviews"
+        id="reviews"
+        aria-labelledby="landing-reviews-title"
+      >
+        <h2 class="landing-reviews-heading" id="landing-reviews-title">
+          <span class="landing-reviews-title-plain">What Our</span>
+          <span class="landing-reviews-title-script">Customer Say</span>
+        </h2>
+        <p class="landing-reviews-sub">
+          Trusted by over 10,000+ happy families.
+        </p>
+        <div class="landing-reviews-grid">
+          <blockquote class="landing-review-card">
+            <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
+            <p class="landing-review-quote">
+              “The quality of paneer is unmatched. It is so soft and fresh, just
+              like homemade.”
+            </p>
+            <footer class="landing-review-meta">
+              <img
+                src="assets/imgs/LandingPage/profile.png"
+                alt=""
+                class="landing-review-avatar"
+                width="72"
+                height="72"
+              />
+              <div>
+                <cite class="landing-review-name">Rahul Sharma</cite>
+                <span class="landing-review-place">Dewas</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="landing-review-card">
+            <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
+            <p class="landing-review-quote">
+              “Buffalo milk tastes rich and pure. We’ve been morning customers
+              for three years.”
+            </p>
+            <footer class="landing-review-meta">
+              <img
+                src="assets/imgs/LandingPage/rahulSharma.png"
+                alt=""
+                class="landing-review-avatar"
+                width="72"
+                height="72"
+              />
+              <div>
+                <cite class="landing-review-name">Priya Mehta</cite>
+                <span class="landing-review-place">Dewas</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="landing-review-card">
+            <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
+            <p class="landing-review-quote">
+              “Bulk sweets for our event were fresh and perfectly packed. Highly
+              recommended.”
+            </p>
+            <footer class="landing-review-meta">
+              <img
+                src="assets/imgs/LandingPage/rahulFemale.png"
+                alt=""
+                class="landing-review-avatar"
+                width="72"
+                height="72"
+              />
+              <div>
+                <cite class="landing-review-name">Amit Verma</cite>
+                <span class="landing-review-place">Indore</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="landing-review-card">
+            <div class="landing-review-stars" aria-hidden="true">★★★★★</div>
+            <p class="landing-review-quote">
+              “Prompt delivery and honest pricing. Naveen Dairy is our trusted
+              family brand.”
+            </p>
+            <footer class="landing-review-meta">
+              <img
+                src="assets/imgs/LandingPage/rahul2.png"
+                alt=""
+                class="landing-review-avatar"
+                width="72"
+                height="72"
+              />
+              <div>
+                <cite class="landing-review-name">Sneha Patil</cite>
+                <span class="landing-review-place">Dewas</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="logo logo--footer">
-                    <div class="logo-circle">
-                        <span class="logo-text">N</span>
-                    </div>
-                </div>
-                <h2>Naveen <span class="dairy">Dairy</span></h2>
-                <p>Bringing the purest dairy products and authentic Indian sweets</p>
-                <p>from our farm to your family since 1995.</p>
-                <p>&nbsp;</p>
-                <p>Quality you can trust, taste you'll love.</p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo logo--footer">
+            <div class="logo-circle">
+              <span class="logo-text">N</span>
             </div>
-
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dairy-products.html">Dairy Products</a></li>
-                    <li><a href="sweets.html">Authentic Sweets</a></li>
-                    <li><a href="bulk-orders.html">Bulk Orders</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Main Market, Dewas, Madhya Pradesh</p>
-                <p>4550251</p>
-                <p>+91 98765 434500</p>
-                <p>info@naveendairy.com</p>
-
-                <div class="social-icons">
-                    <a href="#" class="social-icon">
-                        <img src="assets/icons/whatsappIcon.png" alt="WhatsApp">
-                    </a>
-                    <a href="#" class="social-icon">
-                        <img src="assets/icons/facebookIcon.png" alt="Facebook">
-                    </a>
-                    <a href="#" class="social-icon">
-                        <img src="assets/icons/instagramIcon.png" alt="Instagram">
-                    </a>
-                </div>
-            </div>
+          </div>
+          <h2>Naveen <span class="dairy">Dairy</span></h2>
+          <p>Bringing the purest dairy products and authentic Indian sweets</p>
+          <p>from our farm to your family since 1995.</p>
+          <p>&nbsp;</p>
+          <p>Quality you can trust, taste you'll love.</p>
         </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dairy-products.html">Dairy Products</a></li>
+            <li><a href="sweets.html">Authentic Sweets</a></li>
+            <li><a href="bulk-orders.html">Bulk Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Main Market, Dewas, Madhya Pradesh</p>
+          <p>4550251</p>
+          <p>+91 98765 434500</p>
+          <p>info@naveendairy.com</p>
+
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <img src="assets/icons/whatsappIcon.png" alt="WhatsApp" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/icons/facebookIcon.png" alt="Facebook" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/icons/instagramIcon.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
