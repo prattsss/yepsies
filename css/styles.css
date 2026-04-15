@@ -1105,18 +1105,17 @@ a.product-button {
 /* Footer */
 .footer {
     background: black;
-    /* min-height: 537px; */
-    padding: 44px 0 56px;
+    padding: clamp(36px, 5vw, 44px) 0 clamp(44px, 6vw, 56px);
     color: white;
 }
 
 .footer-content {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 44px 0 42px;
+    padding: 0 clamp(20px, 4vw, 44px);
     display: grid;
-    grid-template-columns: minmax(360px, 1.1fr) minmax(260px, 0.9fr) minmax(360px, 1.1fr);
-    gap: 32px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(24px, 3vw, 32px);
     align-items: start;
 }
 
@@ -1152,8 +1151,8 @@ a.product-button {
 .footer-brand-title {
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.15;
     letter-spacing: -0.05em;
     margin: 0;
 }
@@ -1163,12 +1162,12 @@ a.product-button {
 }
 
 .footer-brand-copy {
-    max-width: 310px;
-    margin: 0 0 26px;
+    max-width: min(310px, 100%);
+    margin: 0 0 clamp(18px, 3vw, 26px);
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.35;
     letter-spacing: -0.05em;
 }
 
@@ -1181,10 +1180,10 @@ a.product-button {
 .footer .footer-contact h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.15;
     letter-spacing: -0.05em;
-    margin-bottom: 22px;
+    margin-bottom: clamp(16px, 2.5vw, 22px);
     text-align: center;
 }
 
@@ -1204,11 +1203,11 @@ a.product-button {
     text-underline-offset: 3px;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: clamp(17px, 2.4vw, 24px);
+    line-height: 1.25;
     letter-spacing: -0.05em;
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: clamp(4px, 1vw, 8px);
     transition: color 0.3s;
 }
 
@@ -1223,8 +1222,8 @@ a.product-button {
 .footer .footer-contact p {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: clamp(17px, 2.4vw, 24px);
+    line-height: 1.25;
     letter-spacing: -0.05em;
     margin-bottom: 0;
 }
@@ -1258,21 +1257,25 @@ a.product-button {
     object-fit: contain;
 }
 
-@media (max-width: 1100px) {
+/* Footer — stack columns before three-column min-widths collide with viewport */
+@media (max-width: 1200px) {
     .footer {
-        min-height: 0;
-        padding: 42px 0;
+        padding: clamp(32px, 5vw, 42px) clamp(16px, 4vw, 24px);
     }
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 0 24px;
+        gap: clamp(24px, 4vw, 36px);
+        padding: 0 clamp(20px, 4vw, 32px);
     }
 
     .footer-links,
     .footer-contact {
         justify-self: center;
+        text-align: center;
+    }
+
+    .footer-links {
         text-align: center;
     }
 
@@ -1282,18 +1285,70 @@ a.product-button {
 }
 
 @media (max-width: 700px) {
+    .footer {
+        padding: clamp(28px, 6vw, 36px) clamp(14px, 4vw, 20px) clamp(36px, 7vw, 48px);
+    }
+
+    .footer-content {
+        gap: clamp(22px, 5vw, 32px);
+        padding: 0 clamp(16px, 4vw, 24px);
+    }
+
+    .footer-brand-head {
+        flex-wrap: wrap;
+        gap: clamp(6px, 2vw, 8px);
+    }
+
+    .footer-logo {
+        width: clamp(56px, 15vw, 74px);
+        height: clamp(56px, 15vw, 74px);
+    }
+
     .footer-brand-title,
     .footer .footer-links h3,
     .footer .footer-contact h3 {
-        font-size: 34px;
+        font-size: clamp(24px, 6.5vw, 34px);
         line-height: 1.12;
     }
 
     .footer-brand-copy,
     .footer .footer-contact p,
     .footer .footer-links a {
-        font-size: 20px;
-        line-height: 1.25;
+        font-size: clamp(15px, 4vw, 20px);
+        line-height: 1.35;
+    }
+
+    .social-icons {
+        gap: clamp(12px, 3vw, 18px);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: clamp(44px, 12vw, 52px);
+        height: clamp(44px, 12vw, 52px);
+    }
+
+    .social-icon img {
+        width: clamp(18px, 5vw, 22px);
+        height: clamp(18px, 5vw, 22px);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 24px 12px 32px;
+    }
+
+    .footer-content {
+        padding: 0 12px;
+        gap: 20px;
+    }
+
+    .footer-brand-title,
+    .footer .footer-links h3,
+    .footer .footer-contact h3 {
+        font-size: clamp(22px, 7vw, 28px);
     }
 }
 
@@ -1340,6 +1395,13 @@ a.product-button {
         display: block;
         margin-top: clamp(-0.25rem, -1vw, 0);
     }
+
+    .page-description {
+        margin-top: clamp(1rem, 3vw, 2rem);
+        margin-bottom: clamp(1.25rem, 4vw, 2rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1359,7 +1421,10 @@ a.product-button {
 
     .page-description {
         font-size: clamp(15px, 4vw, 18px);
+        margin-top: clamp(1.25rem, 4vw, 2rem);
         margin-bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
