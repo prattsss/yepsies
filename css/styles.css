@@ -367,33 +367,6 @@ body.index-page .navbar.is-scrolled .nav-links a:hover {
     pointer-events: none;
 }
 
-.landing-products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-    align-items: stretch;
-}
-
-.landing-product-card .product-image-wrap {
-    border-radius: 28px;
-    overflow: hidden;
-    margin-bottom: 14px;
-}
-
-.landing-product-card .product-image {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-
-a.product-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
 .landing-bestsellers {
     background: #ededed;
     max-width: none;
@@ -417,99 +390,6 @@ a.product-button {
     font-size: 24px;
     line-height: 1.21;
     text-align: center;
-    letter-spacing: -0.05em;
-}
-
-.landing-bestsellers .landing-products-grid {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0;
-    grid-template-columns: repeat(4, 295px);
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.landing-bestsellers .landing-product-card {
-    position: relative;
-    min-height: 579px;
-    border-radius: 52px 49px 47px 53px;
-    padding: 20px 17px;
-    border-color: #9f9f9f;
-    box-shadow: none;
-    overflow: hidden;
-}
-
-.landing-bestsellers .landing-product-card .product-title {
-    position: absolute;
-    left: 11.53%;
-    right: 30.89%;
-    top: 67.53%;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: -0.05em;
-    margin: 0;
-    color: #2c2c2c;
-}
-
-.landing-bestsellers .landing-product-card .product-price {
-    position: absolute;
-    left: 72.88%;
-    right: 7.47%;
-    top: 68.57%;
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.2;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: -0.05em;
-    color: #16a34a;
-}
-
-.landing-bestsellers .landing-product-card .product-description {
-    position: absolute;
-    left: 7.46%;
-    right: 7.61%;
-    top: 78.41%;
-    font-size: 12px;
-    line-height: 1.5;
-    min-height: 0;
-    margin: 0;
-    font-weight: 400;
-    letter-spacing: -0.05em;
-    color: #71717a;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.landing-bestsellers .landing-product-card .product-image-wrap {
-    position: absolute;
-    left: 5.51%;
-    right: 5.8%;
-    top: 3.4%;
-    bottom: 34.13%;
-    border-radius: 38.5059px;
-    margin-bottom: 0;
-}
-
-.landing-bestsellers .landing-product-card .product-image {
-    height: 100%;
-    margin-bottom: 0;
-}
-
-.landing-bestsellers .landing-product-card .product-button {
-    position: absolute;
-    left: 5.51%;
-    right: 5.8%;
-    top: 85.57%;
-    bottom: 4.92%;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25.6706px;
-    padding: 0 12px;
-    font-size: 12.8353px;
-    line-height: 1.25;
     letter-spacing: -0.05em;
 }
 
@@ -800,16 +680,153 @@ a.product-button {
     letter-spacing: 0.01em;
 }
 
+/* Product Cards — shared grid UI (index, dairy, sweets) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 295px);
+    gap: 20px;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+
+.landing-bestsellers .products-grid {
+    padding: 0;
+}
+
+.product-card {
+    position: relative;
+    background: white;
+    border: 1px solid #9f9f9f;
+    border-radius: 52px 49px 47px 53px;
+    padding: 20px 17px;
+    min-height: 579px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.product-card .product-title {
+    position: absolute;
+    left: 11.53%;
+    right: 30.89%;
+    top: 67.53%;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    margin: 0;
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+.product-card .product-price {
+    position: absolute;
+    left: 72.88%;
+    right: 7.47%;
+    top: 68.57%;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #16a34a;
+}
+
+.product-card .product-description {
+    position: absolute;
+    left: 7.46%;
+    right: 7.61%;
+    top: 78.41%;
+    font-size: 12px;
+    line-height: 1.5;
+    min-height: 0;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    color: #71717a;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-card .product-image-wrap {
+    position: absolute;
+    left: 5.51%;
+    right: 5.8%;
+    top: 3.4%;
+    bottom: 34.13%;
+    border-radius: 38.5059px;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.product-card .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.product-card .product-button {
+    position: absolute;
+    left: 5.51%;
+    right: 5.8%;
+    top: 85.57%;
+    bottom: 4.92%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25.6706px;
+    padding: 0 12px;
+    font-size: 12.8353px;
+    line-height: 1.25;
+    letter-spacing: -0.05em;
+    background: black;
+    color: white;
+    border: 1px solid black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.product-button:hover {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+a.product-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 @media (max-width: 1100px) {
     .landing-bestsellers .landing-eyebrow {
         max-width: 100%;
         padding: 0 40px;
     }
 
-    .landing-bestsellers .landing-products-grid {
+    .products-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 0 40px;
+        padding: 40px 40px;
         gap: 20px;
+        width: 100%;
+        max-width: 1240px;
+    }
+
+    .landing-bestsellers .products-grid {
+        padding: 0 40px;
     }
 
     .landing-bestsellers .landing-lead {
@@ -946,18 +963,16 @@ a.product-button {
         margin-left: auto;
     }
 
-    .landing-bestsellers .landing-products-grid {
+    .products-grid {
         grid-template-columns: 1fr;
-        padding: 0 20px;
+        padding: 32px 20px;
         gap: 16px;
+        width: 100%;
+        max-width: 1240px;
     }
 
-    .landing-bestsellers .landing-product-card .product-title {
-        font-size: 20px;
-    }
-
-    .landing-bestsellers .landing-product-card .product-price {
-        font-size: 15px;
+    .landing-bestsellers .products-grid {
+        padding: 0 20px;
     }
 
     .landing-section {
@@ -1044,83 +1059,6 @@ a.product-button {
         grid-column: auto;
         grid-row: auto;
     }
-}
-
-/* Product Cards */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-    gap: 30px;
-    padding: 40px 96px;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.product-card {
-    background: white;
-    border: 1px solid #9f9f9f;
-    border-radius: 50px;
-    padding: 20px 17px;
-    box-shadow: 0px 4px 12.4px 4px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px 6px rgba(0, 0, 0, 0.3);
-}
-
-.product-image {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 39px;
-    margin-bottom: 20px;
-}
-
-.product-title {
-    font-weight: 700;
-    font-size: 20px;
-    color: #2c2c2c;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--hover-green);
-    letter-spacing: -0.75px;
-    margin-bottom: 10px;
-}
-
-.product-description {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    color: var(--gray-text);
-    letter-spacing: -0.6px;
-    text-align: center;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.product-button {
-    width: 100%;
-    background: black;
-    color: white;
-    padding: 18px;
-    border-radius: 26px;
-    border: 1px solid black;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: -0.64px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.product-button:hover {
-    background: var(--primary-green);
-    border-color: var(--primary-green);
 }
 
 /* Footer */
@@ -1320,7 +1258,7 @@ a.product-button {
 
 /* Page Headers */
 .page-header {
-    padding: 180px 0 60px;
+    padding: 6rem 0 0px;
     text-align: center;
 }
 
@@ -1329,7 +1267,6 @@ a.product-button {
     font-size: 131px;
     letter-spacing: -6.53px;
     color: black;
-    margin-bottom: 20px;
 }
 
 .page-title-accent {
@@ -1343,11 +1280,11 @@ a.product-button {
 }
 
 .page-description {
-    font-weight: 300;
+    font-weight: 200;
     font-size: 23px;
     letter-spacing: -1.13px;
     max-width: 753px;
-    margin: 20px auto;
+    margin: -1rem auto 2rem;
     line-height: 1.6;
 }
 
